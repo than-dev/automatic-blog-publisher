@@ -1,0 +1,11 @@
+{
+	"name": "automatic-blog-publisher",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/than-dev/automatic-blog-publisher.git",
+	"author": "than-dev <nathan.cotrim@gmail.com>",
+	"dependencies": {
+		"ava": "^5.2.0",
+		"openai": "^3.1.0"
+	}
+}
