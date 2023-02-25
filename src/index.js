@@ -14,12 +14,13 @@ async function createPost() {
 	console.log('\n✅ theme generated');
 
 	const content = await generateBlogPost(theme);
-	console.log('\n✅ content generated');
 
-	await createMediumPost(content);
+	await createMediumPost({ content, theme });
 
 	await setUsedTheme(theme);
 }
 
 // a cada 3 dias
-setInterval(createPost, 1000 * 60 * 60 * 24 * 3);
+// setInterval(createPost, 1000 * 60 * 60 * 24 * 3);
+
+createPost();

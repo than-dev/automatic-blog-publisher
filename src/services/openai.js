@@ -9,13 +9,17 @@ const openai = new OpenAIApi(configuration);
 
 async function generateBlogPost(theme) {
 	const response = await openai.createCompletion({
-		prompt: `write a blog post about "${theme}" with a title a subtitle and images in html format`,
+		prompt: `write a long blog post about "${theme}" with a title a subtitle and an image in html format`,
 		model: 'text-davinci-003',
 		max_tokens: 3900,
-		temperature: 0.5
+		temperature: 0.7
 	});
 
+	console.log('\n✅ content generated');
+
 	const content = response.data.choices[0].text;
+
+	console.log(content);
 
 	return content;
 }
