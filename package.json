@@ -2,10 +2,16 @@
 	"name": "automatic-blog-publisher",
 	"version": "1.0.0",
 	"main": "index.js",
+	"type": "module",
 	"repository": "https://github.com/than-dev/automatic-blog-publisher.git",
 	"author": "than-dev <nathan.cotrim@gmail.com>",
+	"scripts": {
+		"start": "node src/index.js"
+	},
 	"dependencies": {
 		"ava": "^5.2.0",
+		"axios": "^1.3.4",
+		"dotenv": "^16.0.3",
 		"openai": "^3.1.0"
 	}
 }
