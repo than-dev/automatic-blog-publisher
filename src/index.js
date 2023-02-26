@@ -20,5 +20,5 @@ async function createPost() {
 	await setUsedTheme(theme);
 }
 
-// a cada 3 dias
-setInterval(createPost, 1000 * 60 * 60 * 24 * 3);
+// um post por dia
+setInterval(createPost, 1000 * 60 * 60 * 24);

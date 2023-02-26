@@ -1,14 +1,16 @@
 const topics = [
-	'programming',
 	'good development pratices',
 	'clean code',
 	'javascript',
-	'tecnology tendences',
-	'IA',
 	'efficience as developer',
-	'chatgpt',
 	'react',
-	'flutter'
+	'flutter',
+	'typescript',
+	'nodejs',
+	'programming tips',
+	'html',
+	'css',
+	'technology career'
 ];
 
 export { topics };
