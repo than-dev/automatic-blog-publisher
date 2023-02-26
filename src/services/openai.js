@@ -49,4 +49,4 @@ async function generatePostTheme() {
 	return content;
 }
 
-export { generateBlogPost, generatePostTheme, getTags, getImage };
+export { generateBlogPost, generatePostTheme, getTags };
