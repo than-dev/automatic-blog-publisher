@@ -21,6 +21,4 @@ async function createPost() {
 }
 
 // a cada 3 dias
-// setInterval(createPost, 1000 * 60 * 60 * 24 * 3);
-
-createPost();
+setInterval(createPost, 1000 * 60 * 60 * 24 * 3);

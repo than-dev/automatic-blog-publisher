@@ -19,8 +19,6 @@ async function generateBlogPost(theme) {
 
 	const content = response.data.choices[0].text;
 
-	console.log(content);
-
 	return content;
 }
 
@@ -51,4 +49,4 @@ async function generatePostTheme() {
 	return content;
 }
 
-export { generateBlogPost, generatePostTheme, getTags };
+export { generateBlogPost, generatePostTheme, getTags, getImage };
