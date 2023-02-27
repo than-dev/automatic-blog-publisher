@@ -1,24 +1,14 @@
-import { generateBlogPost, generatePostTheme } from './services/openai.js';
-import { setUsedTheme, verifyThemeWasUsed } from './services/themes.js';
-import { createMediumPost } from './services/medium.js';
+import 'dotenv/config';
 
-async function createPost() {
-	const theme = await generatePostTheme();
+import { createServer } from 'node:https';
+import { createPost } from './create-post';
 
-	const themeWasUsed = await verifyThemeWasUsed(theme);
-
-	if (themeWasUsed) {
-		return await createPost();
+const server = createServer(async (req, res) => {
+	if (req.method === 'POST') {
+		await createPost();
 	}
 
-	console.log('\n✅ theme generated');
+	res.end();
+});
 
-	const content = await generateBlogPost(theme);
-
-	await createMediumPost({ content, theme });
-
-	await setUsedTheme(theme);
-}
-
-// um post por dia
-setInterval(createPost, 1000 * 60 * 60 * 24);
+server.listen(process.env.PORT || 3000);
