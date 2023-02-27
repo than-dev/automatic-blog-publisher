@@ -9,7 +9,7 @@ const openai = new OpenAIApi(configuration);
 
 async function generateBlogPost(theme) {
 	const response = await openai.createCompletion({
-		prompt: `write a blog post about "${theme}" with an atractive title and subtitle in html format`,
+		prompt: `write a blog post about "${theme}" with a title and subtitle in html format`,
 		model: 'text-davinci-003',
 		max_tokens: 3000,
 		temperature: 0.7
