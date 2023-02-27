@@ -5,7 +5,7 @@ import { createServer } from 'node:http';
 const server = createServer(async (req, res) => {
 	if (req.method === 'POST') {
 		await createPost();
-		return res.end({ message: 'article created with success' });
+		return res.end(JSON.stringify({ message: 'article created with success' }));
 	} else {
 		res.end();
 	}
