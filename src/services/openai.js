@@ -39,7 +39,7 @@ async function generatePostTheme() {
 	const topic = getTopic();
 
 	const response = await openai.createCompletion({
-		prompt: `generate an original blog theme (single line) about "${topic}"`,
+		prompt: `generate a blog theme about "${topic}"`,
 		model: 'text-davinci-003',
 		max_tokens: 70,
 		temperature: 1
