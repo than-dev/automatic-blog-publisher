@@ -1,15 +1,5 @@
 import 'dotenv/config';
 
-import { createServer } from 'node:http';
 import { createPost } from './create-post.js';
 
-const server = createServer(async (req, res) => {
-	if (req.method === 'POST') {
-		createPost();
-		res.end();
-	} else {
-		res.end();
-	}
-});
-
-server.listen(process.env.PORT || 3000);
+await createPost();
