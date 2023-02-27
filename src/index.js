@@ -1,14 +1,6 @@
-import { createPost } from './create-post.js';
+import { CronJob } from 'cron';
 
-import { createServer } from 'node:http';
+import { createPost } from './create-post';
 
-const server = createServer(async (req, res) => {
-	if (req.method === 'POST') {
-		await createPost();
-		return res.end(JSON.stringify({ message: 'article created with success' }));
-	} else {
-		res.end();
-	}
-});
-
-server.listen(3000);
+const job = new CronJob(`0 16 * * *`, createPost);
+job.start();
