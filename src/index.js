@@ -5,7 +5,7 @@ import { createPost } from './create-post.js';
 
 const server = createServer(async (req, res) => {
 	if (req.method === 'POST') {
-		await createPost();
+		createPost();
 		res.end();
 	} else {
 		res.end();
