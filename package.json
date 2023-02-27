@@ -1,7 +1,7 @@
 {
 	"name": "automatic-blog-publisher",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "src/index.js",
 	"type": "module",
 	"repository": "https://github.com/than-dev/automatic-blog-publisher.git",
 	"author": "than-dev <nathan.cotrim@gmail.com>",
