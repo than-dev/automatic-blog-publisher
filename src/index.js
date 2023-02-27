@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 import { createServer } from 'node:https';
-import { createPost } from './create-post';
+import { createPost } from './create-post.js';
 
 const server = createServer(async (req, res) => {
 	if (req.method === 'POST') {
