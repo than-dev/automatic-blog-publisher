@@ -32,6 +32,8 @@ async function getTags(theme) {
 
 	const content = response.data.choices[0]?.text;
 
+	console.log(content);
+
 	return content.toLowerCase().trim().replaceAll(' ', '').split(',');
 }
 
@@ -44,8 +46,6 @@ async function generatePostTheme() {
 		max_tokens: 70,
 		temperature: 1
 	});
-
-	console.log(content);
 
 	const content = response.data.choices[0].text.trim();
 
