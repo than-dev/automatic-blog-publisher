@@ -45,6 +45,8 @@ async function generatePostTheme() {
 		temperature: 1
 	});
 
+	console.log(content);
+
 	const content = response.data.choices[0].text.trim();
 
 	return content;
