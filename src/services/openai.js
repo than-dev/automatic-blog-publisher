@@ -30,6 +30,8 @@ async function getTags(theme) {
 		temperature: 0
 	});
 
+	console.log(response.data.choices);
+
 	const content = response.data.choices[0]?.text;
 
 	console.log(content);
