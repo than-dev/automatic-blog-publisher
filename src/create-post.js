@@ -6,7 +6,7 @@ async function createPost() {
 
 	const theme = await generatePostTheme();
 
-	console.log('\n✅ theme generated');
+	console.log(`\n✅ theme generated: ${theme}`);
 
 	const content = await generateBlogPost(theme);
 

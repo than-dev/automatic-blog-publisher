@@ -7,7 +7,7 @@ const { MEDIUM_API_KEY, MEDIUM_USER_ID } = constants;
 
 async function createMediumPost({ content, theme }) {
 	const tags = await getTags(theme);
-	console.log('\n✅ tags generated');
+	console.log(`\n✅ tags generated: ${tags}`);
 
 	await axios.post(
 		`https://api.medium.com/v1/users/${MEDIUM_USER_ID}/posts`,
